@@ -2,12 +2,18 @@ const turnOnBtn = document.getElementById('turnOn');
 const turnOffBtn = document.getElementById('turnOff');
 const lampImg = document.getElementById('lamp');
 
-turnOffBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  lampImg.src != './img/quebrada.jpg' && (lampImg.src = './img/desligada.jpg');
-})
+const turnOn = () => lampImg.src = './img/ligada.jpg';
 
-turnOnBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  lampImg.src != './img/quebrada.jpg' && (lampImg.src = './img/ligada.jpg');
-})
+const turnOff = () => lampImg.src = './img/desligada.jpg';
+
+const lampBroken = () => lampImg.src = './img/quebrada.jpg';
+
+turnOffBtn.addEventListener('click', turnOff);
+
+turnOnBtn.addEventListener('click', turnOn);
+
+lampImg.addEventListener('dblclick', lampBroken);
+
+lampImg.addEventListener('mouseover', turnOn);
+
+lampImg.addEventListener('mouseleave', turnOff);
