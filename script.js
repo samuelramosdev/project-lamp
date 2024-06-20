@@ -2,9 +2,11 @@ const turnOnBtn = document.getElementById('turnOn');
 const turnOffBtn = document.getElementById('turnOff');
 const lampImg = document.getElementById('lamp');
 
-const turnOn = () => lampImg.src = './img/ligada.jpg';
+const isLampBroken = () => lamp.src.includes('quebrada');
 
-const turnOff = () => lampImg.src = './img/desligada.jpg';
+const turnOn = () => !isLampBroken() && (lampImg.src = './img/ligada.jpg');
+
+const turnOff = () => !isLampBroken() && (lampImg.src = './img/desligada.jpg');
 
 const lampBroken = () => lampImg.src = './img/quebrada.jpg';
 
