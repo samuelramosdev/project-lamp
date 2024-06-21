@@ -18,7 +18,7 @@ Este projeto é uma introdução básica aos elementos HTML e manipulação do D
 
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/project-lamp.git
+    git clone https://github.com/samuelramosdev/project-lamp.git
     ```
 
 2. Navegue até o diretório do projeto:
